@@ -77,6 +77,22 @@ a {
   text-align: center;
 }
 
+
+@media (max-width: 768px) {
+  .app-container {
+    width: 90%; 
+    padding: 2em; 
+  }
+
+  .input-box {
+    width: 100%; 
+  }
+
+  .form-range {
+    width: 100%;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
