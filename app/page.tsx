@@ -69,8 +69,6 @@ const Metronome = () => {
     }
   };
 
-  
-
   return (
     <Container className="main-container">
       <Container className="app-container">
@@ -98,21 +96,22 @@ const Metronome = () => {
                 onChange={handleInputChange}
                 placeholder="setear"
               />
+              <div className="input-group">
               <Button
-                className="mt-2"
                 onClick={handleBpmSubmit}
+                className=""
                 variant="warning"
               >
                 adjust bpm
               </Button>
+              <Button
+                onClick={playing ? stopMetronome : startMetronome}
+                variant={buttonVariant}
+              >
+                {playing ? "stop" : "start"}
+              </Button>
+              </div>
             </Form.Group>
-            <Button
-              className="mt-3"
-              onClick={playing ? stopMetronome : startMetronome}
-              variant={buttonVariant}
-            >
-              {playing ? "stop" : "start"}
-            </Button>{" "}
           </Col>
         </Row>
       </Container>
